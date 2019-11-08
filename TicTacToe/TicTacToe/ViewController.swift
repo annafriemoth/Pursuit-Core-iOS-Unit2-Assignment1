@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var winnerLabel: UILabel!
     
+    @IBOutlet weak var playerTurn: UILabel!
+    
     @IBOutlet weak var playAgain: UIButton!
     
     @IBAction func playAgain(_ sender: Any) {
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
     
     var activeGame = true
     
-  
+    
     
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0] // 0-empty, 1-x, 2-0
     
@@ -41,14 +43,17 @@ class ViewController: UIViewController {
         if gameState[activePosition] == 0 && activeGame {
 
             gameState[activePosition] = activePlayer
-            
+        
+        playerTurn.text = "it is player 1 turn!"
         if (activePlayer == 1) {
             sender.setBackgroundImage(UIImage(named: "x"), for: [])
             activePlayer = 2
+            playerTurn.text = "it is player 2 turn!"
             
         } else {
             sender.setBackgroundImage(UIImage(named: "o"), for: [])
                 activePlayer = 1
+                playerTurn.text = "it is player 1 turn!"
         }
             
             for combination in winningCombinations {

@@ -98,12 +98,20 @@
                                     <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvT-m0-X7P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="player turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLC-dY-0vx">
+                                <rect key="frame" x="130" y="746" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="playAgain" destination="i8B-vx-wTY" id="P4o-tN-RPb"/>
+                        <outlet property="playerTurn" destination="nLC-dY-0vx" id="msr-zx-b83"/>
                         <outlet property="winnerLabel" destination="oTe-sZ-qF9" id="53S-SN-BYV"/>
                         <outletCollection property="gameButtons" destination="lhG-of-IqL" collectionClass="NSMutableArray" id="0A1-2p-qTg"/>
                         <outletCollection property="gameButtons" destination="1uR-mV-vB0" collectionClass="NSMutableArray" id="Hma-lf-mTR"/>
